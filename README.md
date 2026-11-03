@@ -1,76 +1,76 @@
-# Dag 6 · CSS Grid
+﻿# Day 6 · CSS Grid
 
-*Modul 4, UI/UX & Frontendutveckling, Lexicon IT-Proffs*
+*Module 4, UI/UX & Frontend Development, Lexicon IT-Proffs*
 
-## Vad du ska göra idag
+## What you will do today
 
-Du bygger menyns rutnät och Om oss-sektionens layout med CSS Grid.
+You will build the menu grid and the About Us section layout using CSS Grid.
 
-## Bakgrund
+## Background
 
-Grid ordnar element i **två dimensioner**: rader och kolumner samtidigt. Tumregeln du ska ha i ryggraden: **Grid för helheten, Flexbox inuti.** Idag bygger du ett responsivt rutnät utan en enda media query.
+Grid arranges elements in **two dimensions**: rows and columns at the same time. The rule of thumb to remember: **Grid for the overall layout, Flexbox inside.** Today you will build a responsive grid without a single media query.
 
-## Så arbetar du (samma som alltid)
+## Workflow (the same as always)
 
-1. **Forka** dagens repo på GitHub (*Fork → Create fork*).
-2. **Klona din fork:** *Code → HTTPS → kopiera adressen*. I terminalen (Ctrl+ö i VS Code): `git clone <adressen>`. Öppna den nya mappen i VS Code och starta *Live Server*.
-3. **Gör uppgiften.** Spara och kontrollera i webbläsaren efter varje steg. Gör en commit efter varje avslutat steg: `git add .` och `git commit -m "Beskriv vad du gjorde"`.
-4. **Skicka upp** när du är klar: `git push`.
-5. **Lämna in i Microsoft Forms.**
+1. **Fork** today's repository on GitHub (*Fork → Create fork*).
+2. **Clone your fork:** *Code → HTTPS → copy the URL*. In the terminal (Ctrl+ö in VS Code): `git clone <url>`. Open the new folder in VS Code and start *Live Server*.
+3. **Complete the assignment.** Save and check in the browser after each step. Make a commit after each completed step: `git add .` and `git commit -m "Describe what you did"`.
+4. **Push** when you are done: `git push`.
+5. **Submit through Microsoft Forms.**
 
-Fastnar du: skriv ner exakt var och vad du försökt, och ta det först i nästa handledda pass.
+If you get stuck, write down exactly where you got stuck and what you have tried, and bring it up first in the next guided session.
 
-## Uppgiften steg för steg
+## The assignment, step by step
 
-### Steg 1. Menyn som rutnät
+### Step 1. Turn the menu into a grid
 
-Gör `.meny-lista` (diven som håller de tre korten) till en gridbehållare. Börja med `grid-template-columns: 1fr 1fr 1fr` och se tre kolumner. Lägg till `gap: 20px`. Ta bort `margin-bottom` på korten inne i rutnätet, `gap` sköter avståndet.
+Make `.meny-lista` (the div containing the three cards) a grid container. Start with `grid-template-columns: 1fr 1fr 1fr` and observe the three columns. Add `gap: 20px`. Remove `margin-bottom` from the cards inside the grid; `gap` handles the spacing.
 
-### Steg 2. Gör det flexibelt
+### Step 2. Make it flexible
 
-Byt kolumnerna mot `repeat(auto-fit, minmax(240px, 1fr))`. Dra i webbläsarfönstret och se hur antalet kolumner anpassar sig själv.
+Replace the column definition with `repeat(auto-fit, minmax(240px, 1fr))`. Resize the browser window and watch the number of columns adjust automatically.
 
-### Steg 3. Om oss i två kolumner
+### Step 3. About Us in two columns
 
-Gör `#om-oss` till en grid. Textstyckena i den ena kolumnen och bilden i den andra. Rubriken ska täcka båda kolumnerna: `grid-column: 1 / -1`.
+Make `#om-oss` a grid. Place the paragraphs in one column and the image in the other. The heading should span both columns: `grid-column: 1 / -1`.
 
-### Steg 4. Använd grid-visualiseringen
+### Step 4. Use the grid overlay
 
-I DevTools: klicka på `grid`-ikonen bredvid elementet. Rader och kolumner ritas ut. Ta en titt på radnumren.
+In DevTools, click the `grid` icon next to the element. The rows and columns will be outlined. Take a look at the line numbers.
 
-### Steg 5. Explicit placering
+### Step 5. Explicit placement
 
-Placera bilden i kolumn 2 med `grid-column: 2` och `grid-row`. Experimentera med att byta plats på text och bild.
+Place the image in column 2 using `grid-column: 2` and `grid-row`. Experiment with swapping the positions of the text and image.
 
-### Steg 6. Motivera ditt val
+### Step 6. Explain your choice
 
-I en kommentar för varje layout: skriv "Grid" eller "Flexbox" och varför.
+For each layout, add a comment stating "Grid" or "Flexbox" and explaining why.
 
-## Kontrollista: så vet du att du är klar
+## Checklist: how to know you are done
 
-- [ ] Menyn är ett grid som ändrar antal kolumner utan media queries.
-- [ ] Rubriken i Om oss sträcker sig över båda kolumnerna.
-- [ ] Om oss har en tvåkolumnslayout.
-- [ ] Du har använt `gap`.
-- [ ] Du har motiverat valet mellan Grid och Flexbox i kommentarer.
-- [ ] Du har pushat till din fork och skickat in länken.
+- [ ] The menu is a grid that changes its number of columns without media queries.
+- [ ] The About Us heading spans both columns.
+- [ ] About Us has a two-column layout.
+- [ ] You have used `gap`.
+- [ ] You have explained your choice between Grid and Flexbox in comments.
+- [ ] You have pushed to your fork and submitted the link.
 
-## Tips om du fastnar
+## Tips if you get stuck
 
-- `fr` är en andel av ledigt utrymme: `1fr 2fr` ger dubbelt så bred andra kolumn.
-- Child ligger fel? Kolla om det har explicita `grid-column`-värden.
-- Skriv ut kolumnerna på papper om du tappar bort dig.
+- `fr` is a fraction of the available space: `1fr 2fr` makes the second column twice as wide.
+- Is a child element in the wrong place? Check whether it has explicit `grid-column` values.
+- Sketch the columns on paper if you lose track.
 
-## Inlämning
+## Submission
 
-**Deadline: imorgon klockan 09.00.** Allt lämnas in i Microsoft Forms. Du behöver inte redovisa något muntligt.
+**Deadline: tomorrow at 09:00.** Submit everything through Microsoft Forms. No oral presentation is required.
 
-I formuläret fyller du i:
+Fill in the following in the form:
 
-1. Länk till din fork av det här repot.
-2. Reflektion: Förklara tumregeln "Grid för helheten, Flexbox inuti" med ett eget exempel från kaféets sida.
+1. A link to your fork of this repository.
+2. Reflection: Explain the rule of thumb "Grid for the overall layout, Flexbox inside" using your own example from the café's page.
 
-## Vill du mer? (frivilligt)
+## Want to do more? (optional)
 
-- Bygg om hela sidan med `grid-template-areas` (header, main, footer).
-- Gör en bildgalleri-sektion i Om oss med ett grid i grid.
+- Rebuild the entire page using `grid-template-areas` (header, main, footer).
+- Create an image gallery section in About Us with a nested grid.
